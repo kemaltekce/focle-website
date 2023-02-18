@@ -1,0 +1,96 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>focle</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+  >
+  </script>
+</head>
+<body>
+  <div class="main">
+    <div class="intro">
+      <div
+      x-data="{
+        text: '',
+        fullText : 'An approch to improve your focus.',
+        charIndex: 0,
+        typeSpeed: 100,
+      }"
+      x-init="
+        setInterval(() => {
+          let current = $data.fullText;
+          $data.text = current.substring(0, $data.charIndex);
+          $data.charIndex += 1;
+        }, $data.typeSpeed);"
+      class="typing"
+      x-text="text"
+      >
+      </div>
+      <div class="img" x-data="{ arrow: true }">
+        <img x-show="arrow"
+          @scroll.window="arrow = window.scrollY < 10"
+          src="./assets/arrow-down.svg" class="img__content" alt="close"
+        />
+        <img x-show="!arrow"
+          @scroll.window="arrow = window.scrollY < 10"
+          src="./assets/line.svg" class="img__content" alt="close"
+        />
+      </div>
+    </div>
+    <div class="card">
+      <p>
+        Focusing is essential to getting things done and even more so for
+        learning new skills. But our focus depends on a lot of variables and is
+        affected by a huge variety of events. It depends on how we slept, the
+        time of day, what we ate, our emotional state, our stress level, our
+        energy level and the list goes on and on.
+      </p>
+      <br>
+      <p>
+        Focusing and keeping your focus can be difficult.
+      </p>
+      <br>
+      <p>
+        But one tool that helps me consistently to focus every day is a simple
+        timer.
+      </p>
+      <br>
+      <p>
+        But the timer has to be built around three main principles: visual and
+        intentional timeboxing, your focus is flexible and taking time to rest.
+      </p>
+      <br>
+      <p>
+        So let's try <strong>flexible timeboxing</strong>.
+      </p>
+    </div>
+    <div class="text">
+      <p>
+        the app is still being developing. but coming soon...
+      </p>
+      <br>
+      <p>
+        In the meantime you can check out
+        <a href="">this article</a>
+         for more information.
+      </p>
+    </div>
+    <div class="footer">
+      <img src="./assets/ellipse-half.svg" class="footer__image" alt="close"/>
+    </div>
+  </div>
+</body>
+</html>
