@@ -7,6 +7,10 @@
   background-color: #f7f7f7;
 }
 
+::selection {
+  background-color: #555555;
+}
+
 a {
   color: #555555;
   text-decoration: none;
@@ -22,6 +26,10 @@ a:hover {
 
 body {
   margin: 0;
+}
+
+.bold {
+  font-weight: 600;
 }
 
 p {
@@ -74,6 +82,22 @@ p {
   left: 0;
 }
 
+.img--animation {
+  animation: moveUpDown 1s linear infinite;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .img__content {
   height: 1rem;
 }
@@ -83,9 +107,19 @@ p {
   margin: 0 auto;
 }
 
-.text {
+.text, .text--small {
   padding: 1rem 0rem;
   margin: 1rem;
+}
+
+.text--small {
+  font-size: 0.9rem;
+}
+
+.title {
+  padding: 2rem 1rem 0rem 1rem;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .typing {

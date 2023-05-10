@@ -39,7 +39,7 @@
       x-text="text"
       >
       </div>
-      <div class="img" x-data="{ arrow: true }">
+      <div class="img" x-data="{ arrow: true }" x-bind:class="{ 'img--animation': arrow }">
         <img x-show="arrow"
           @scroll.window="arrow = window.scrollY < 10"
           src="./assets/arrow-down.svg" class="img__content" alt="close"
@@ -84,15 +84,57 @@
     </div>
     <div class="text">
       <p>
-        the app is still being developed. but coming soon...
-      </p>
-      <br>
-      <p>
-        in the meantime you can check out
+        Check out
         <a href="https://kmltkc.medium.com/a-simple-tool-to-improve-my-focus-flexible-timeboxing-7dc609a2e0f1">this article</a>
-         for more information.
+         for more information regarding flexible timeboxing.
       </p>
     </div>
+    <section>
+      <div class="title">
+        Download
+      </div>
+      <div class="text">
+        <p>
+          No sign up. No external tracking. Just a simple timer to download and try.
+        </p>
+        <br>
+        <p>
+          focle is available for <a href="" download>MacOS</a> (coming soon).
+        </p>
+      </div>
+    </section>
+    <section>
+      <div class="title">
+        Shortcuts
+      </div>
+      <div class="text">Here are a few keyboard shortcuts to make the usage of the timer more pleasant.</div>
+      <div class="card">
+        <p><span class="bold">cmd + m:</span> play/pause background music</p>
+        <br>
+        <p><span class="bold">cmd + j:</span> edit timer minutes</p>
+        <br>
+        <p><span class="bold">cmd + k:</span> edit timer seconds</p>
+        <br>
+        <p><span class="bold">cmd + p:</span> play/pause timer</p>
+        <br>
+        <p><span class="bold">cmd + n:</span> open/close vague notes area</p>
+        <br>
+        <p><span class="bold">esc:</span> hop out of timer minutes, timer seconds, or notes area</p>
+        <br>
+        <p>a shortcut for canceling the timer doesn't exist on purpose to make canceling more deliberate</p>
+      </div>
+    </section>
+    <section>
+      <div class="title">
+        Support
+      </div>
+      <div class="text">
+        focle will always be available for free. But if you like focle, you can support it via <a href="">ko-fi</a> (coming soon).
+      </div>
+    </section>
+    <section>
+      <div class="text--small">Made with ❤️ in Münster.</div>
+    </section>
     <div class="footer">
       <img src="./assets/ellipse-half.svg" class="footer__image" alt="close"/>
     </div>
